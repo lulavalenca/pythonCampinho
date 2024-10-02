@@ -45,6 +45,58 @@
         "documentation": {}
     },
     {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "getpass",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "getpass",
+        "description": "getpass",
+        "detail": "getpass",
+        "documentation": {}
+    },
+    {
+        "label": "tkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "smtplib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "smtplib",
+        "description": "smtplib",
+        "detail": "smtplib",
+        "documentation": {}
+    },
+    {
+        "label": "EmailMessage",
+        "importPath": "email.message",
+        "description": "email.message",
+        "isExtraImport": true,
+        "detail": "email.message",
+        "documentation": {}
+    },
+    {
         "label": "bin_dir",
         "kind": 5,
         "importPath": "campinhopython.Scripts.activate_this",
@@ -330,6 +382,33 @@
         "description": "campinho7ex",
         "peekOfCode": "userReply = input(\"Would you like to buy stamps, buy an envelope, or make a copy? (Enter stamps, envelope, or copy) \")\n# Condicional com múltiplas opções de serviço\nif userReply == \"stamps\":\n    print(\"We have many stamp designs to choose from.\")\nelif userReply == \"envelope\":\n    print(\"We have many envelope sizes to choose from.\")\nelif userReply == \"copy\":\n    copies = input(\"How many copies would you like? (Enter a number) \")\n    print(\"Here are {} copies.\".format(copies))\nelse:",
         "detail": "campinho7ex",
+        "documentation": {}
+    },
+    {
+        "label": "register_user",
+        "kind": 2,
+        "importPath": "codigoextracamoinho",
+        "description": "codigoextracamoinho",
+        "peekOfCode": "def register_user():\n    user_data = {}\n    # Get first name\n    while True:\n        first_name = input(\"Enter your first name: \")\n        if first_name.strip() != \"\":\n            user_data[\"first_name\"] = first_name\n            break\n        else:\n            print(\"Please enter a valid first name.\")",
+        "detail": "codigoextracamoinho",
+        "documentation": {}
+    },
+    {
+        "label": "register_user",
+        "kind": 2,
+        "importPath": "codigoextracampinho1",
+        "description": "codigoextracampinho1",
+        "peekOfCode": "def register_user():\n    user_data = {}\n    # Get first name\n    while True:\n        first_name = input(\"Enter your first name: \")\n        if first_name.strip() != \"\":\n            user_data[\"first_name\"] = first_name\n            break\n        else:\n            print(\"Please enter a valid first name.\")",
+        "detail": "codigoextracampinho1",
+        "documentation": {}
+    },
+    {
+        "label": "LoginScreen",
+        "kind": 6,
+        "importPath": "codigoextratela",
+        "description": "codigoextratela",
+        "peekOfCode": "class LoginScreen:\n    def __init__(self, root):\n        self.root = root\n        self.root.title(\"Login Screen\")\n        # Create frames\n        self.frame_login = tk.Frame(self.root, bg=\"gray\")\n        self.frame_login.pack(fill=\"both\", expand=True)\n        self.frame_recovery = tk.Frame(self.root, bg=\"gray\")\n        self.frame_recovery.pack(fill=\"both\", expand=True)\n        # Create login frame widgets",
+        "detail": "codigoextratela",
         "documentation": {}
     }
 ]
