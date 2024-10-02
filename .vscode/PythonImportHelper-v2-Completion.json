@@ -1,0 +1,414 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "copy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "copy",
+        "description": "copy",
+        "detail": "copy",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "getpass",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "getpass",
+        "description": "getpass",
+        "detail": "getpass",
+        "documentation": {}
+    },
+    {
+        "label": "tkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "smtplib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "smtplib",
+        "description": "smtplib",
+        "detail": "smtplib",
+        "documentation": {}
+    },
+    {
+        "label": "EmailMessage",
+        "importPath": "email.message",
+        "description": "email.message",
+        "isExtraImport": true,
+        "detail": "email.message",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "campinhopython.Scripts.activate_this",
+        "description": "campinhopython.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": "campinhopython.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "campinhopython.Scripts.activate_this",
+        "description": "campinhopython.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": "campinhopython.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "campinhopython.Scripts.activate_this",
+        "description": "campinhopython.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "campinhopython.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "campinhopython.Scripts.activate_this",
+        "description": "campinhopython.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "campinhopython.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "campinhopython.Scripts.activate_this",
+        "description": "campinhopython.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "campinhopython.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "campinhopython.Scripts.activate_this",
+        "description": "campinhopython.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "campinhopython.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "campinhopython.Scripts.activate_this",
+        "description": "campinhopython.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "campinhopython.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "campinhopython.Scripts.activate_this",
+        "description": "campinhopython.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "campinhopython.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "myString",
+        "kind": 5,
+        "importPath": "campinho2ex",
+        "description": "campinho2ex",
+        "peekOfCode": "myString = \"This is a string\"\nprint(myString)\n# Exibe o tipo de dado da string\nprint(type(myString))\n# Concatena a string com seu tipo de dado\nprint(myString + \" is of the data type \" + str(type(myString)))\n\"Exercício 2: Uso da concatenação de strings\"\n# Cria duas strings e as concatena \nfirstString = \"water\"\nsecondString = \"fall\"",
+        "detail": "campinho2ex",
+        "documentation": {}
+    },
+    {
+        "label": "firstString",
+        "kind": 5,
+        "importPath": "campinho2ex",
+        "description": "campinho2ex",
+        "peekOfCode": "firstString = \"water\"\nsecondString = \"fall\"\nthirdString = firstString + secondString \nprint(thirdString)\n\"Exercício 3: Uso de strings de entrada\"\n# Pede o nome do usuario\nname = input(\"qual o seu nome? \")\n# Exibe o nome inserido \nprint(name)\n\"Exercício 4: Formatação de strings de saída\"",
+        "detail": "campinho2ex",
+        "documentation": {}
+    },
+    {
+        "label": "secondString",
+        "kind": 5,
+        "importPath": "campinho2ex",
+        "description": "campinho2ex",
+        "peekOfCode": "secondString = \"fall\"\nthirdString = firstString + secondString \nprint(thirdString)\n\"Exercício 3: Uso de strings de entrada\"\n# Pede o nome do usuario\nname = input(\"qual o seu nome? \")\n# Exibe o nome inserido \nprint(name)\n\"Exercício 4: Formatação de strings de saída\"\n# Pergunta a cor e o animal favoritos do usuario",
+        "detail": "campinho2ex",
+        "documentation": {}
+    },
+    {
+        "label": "thirdString",
+        "kind": 5,
+        "importPath": "campinho2ex",
+        "description": "campinho2ex",
+        "peekOfCode": "thirdString = firstString + secondString \nprint(thirdString)\n\"Exercício 3: Uso de strings de entrada\"\n# Pede o nome do usuario\nname = input(\"qual o seu nome? \")\n# Exibe o nome inserido \nprint(name)\n\"Exercício 4: Formatação de strings de saída\"\n# Pergunta a cor e o animal favoritos do usuario\ncolor = input(\"what is your favorite color? \")",
+        "detail": "campinho2ex",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "campinho2ex",
+        "description": "campinho2ex",
+        "peekOfCode": "name = input(\"qual o seu nome? \")\n# Exibe o nome inserido \nprint(name)\n\"Exercício 4: Formatação de strings de saída\"\n# Pergunta a cor e o animal favoritos do usuario\ncolor = input(\"what is your favorite color? \")\nanimal = input(\"what is your favorite animal? \")\n## Exibe uma mensagem formatada com as informações coletadas\nprint(\"{}, you like a {} {}!\".format(name, color, animal))",
+        "detail": "campinho2ex",
+        "documentation": {}
+    },
+    {
+        "label": "color",
+        "kind": 5,
+        "importPath": "campinho2ex",
+        "description": "campinho2ex",
+        "peekOfCode": "color = input(\"what is your favorite color? \")\nanimal = input(\"what is your favorite animal? \")\n## Exibe uma mensagem formatada com as informações coletadas\nprint(\"{}, you like a {} {}!\".format(name, color, animal))",
+        "detail": "campinho2ex",
+        "documentation": {}
+    },
+    {
+        "label": "animal",
+        "kind": 5,
+        "importPath": "campinho2ex",
+        "description": "campinho2ex",
+        "peekOfCode": "animal = input(\"what is your favorite animal? \")\n## Exibe uma mensagem formatada com as informações coletadas\nprint(\"{}, you like a {} {}!\".format(name, color, animal))",
+        "detail": "campinho2ex",
+        "documentation": {}
+    },
+    {
+        "label": "myString",
+        "kind": 5,
+        "importPath": "campinho3ex",
+        "description": "campinho3ex",
+        "peekOfCode": "myString = \"This is a string\"\nprint(myString)\n# Exibe o tipo de dado da string\nprint(type(myString))\n# Concatena a string com seu tipo de dado\nprint(myString + \" is of the data type \" + str(type(myString)))\n\"Exercício 2: Uso da concatenação de strings\"\n# Cria duas strings e as concatena \nfirstString = \"water\"\nsecondString = \"fall\"",
+        "detail": "campinho3ex",
+        "documentation": {}
+    },
+    {
+        "label": "firstString",
+        "kind": 5,
+        "importPath": "campinho3ex",
+        "description": "campinho3ex",
+        "peekOfCode": "firstString = \"water\"\nsecondString = \"fall\"\nthirdString = firstString + secondString \nprint(thirdString)\n\"Exercício 3: Uso de strings de entrada\"\n# Pede o nome do usuario\nname = input(\"qual o seu nome? \")\n# Exibe o nome inserido \nprint(name)\n\"Exercício 4: Formatação de strings de saída\"",
+        "detail": "campinho3ex",
+        "documentation": {}
+    },
+    {
+        "label": "secondString",
+        "kind": 5,
+        "importPath": "campinho3ex",
+        "description": "campinho3ex",
+        "peekOfCode": "secondString = \"fall\"\nthirdString = firstString + secondString \nprint(thirdString)\n\"Exercício 3: Uso de strings de entrada\"\n# Pede o nome do usuario\nname = input(\"qual o seu nome? \")\n# Exibe o nome inserido \nprint(name)\n\"Exercício 4: Formatação de strings de saída\"\n# Pergunta a cor e o animal favoritos do usuario",
+        "detail": "campinho3ex",
+        "documentation": {}
+    },
+    {
+        "label": "thirdString",
+        "kind": 5,
+        "importPath": "campinho3ex",
+        "description": "campinho3ex",
+        "peekOfCode": "thirdString = firstString + secondString \nprint(thirdString)\n\"Exercício 3: Uso de strings de entrada\"\n# Pede o nome do usuario\nname = input(\"qual o seu nome? \")\n# Exibe o nome inserido \nprint(name)\n\"Exercício 4: Formatação de strings de saída\"\n# Pergunta a cor e o animal favoritos do usuario\ncolor = input(\"what is your favorite color? \")",
+        "detail": "campinho3ex",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "campinho3ex",
+        "description": "campinho3ex",
+        "peekOfCode": "name = input(\"qual o seu nome? \")\n# Exibe o nome inserido \nprint(name)\n\"Exercício 4: Formatação de strings de saída\"\n# Pergunta a cor e o animal favoritos do usuario\ncolor = input(\"what is your favorite color? \")\nanimal = input(\"what is your favorite animal? \")\n## Exibe uma mensagem formatada com as informações coletadas\nprint(\"{}, you like a {} {}!\".format(name, color, animal))",
+        "detail": "campinho3ex",
+        "documentation": {}
+    },
+    {
+        "label": "color",
+        "kind": 5,
+        "importPath": "campinho3ex",
+        "description": "campinho3ex",
+        "peekOfCode": "color = input(\"what is your favorite color? \")\nanimal = input(\"what is your favorite animal? \")\n## Exibe uma mensagem formatada com as informações coletadas\nprint(\"{}, you like a {} {}!\".format(name, color, animal))",
+        "detail": "campinho3ex",
+        "documentation": {}
+    },
+    {
+        "label": "animal",
+        "kind": 5,
+        "importPath": "campinho3ex",
+        "description": "campinho3ex",
+        "peekOfCode": "animal = input(\"what is your favorite animal? \")\n## Exibe uma mensagem formatada com as informações coletadas\nprint(\"{}, you like a {} {}!\".format(name, color, animal))",
+        "detail": "campinho3ex",
+        "documentation": {}
+    },
+    {
+        "label": "myFruitList",
+        "kind": 5,
+        "importPath": "campinho4ex",
+        "description": "campinho4ex",
+        "peekOfCode": "myFruitList = [\"apple\", \"banana\", \"cherry\"]\nprint(myFruitList)\nprint(type(myFruitList))\n# Acessando os itens da lista por posição\nprint(myFruitList[0]) \nprint(myFruitList[1])\nprint(myFruitList[2])\n#alterando um valor da lista\nmyFruitList[2] = \"orange\"\nprint(myFruitList)",
+        "detail": "campinho4ex",
+        "documentation": {}
+    },
+    {
+        "label": "myFruitList[2]",
+        "kind": 5,
+        "importPath": "campinho4ex",
+        "description": "campinho4ex",
+        "peekOfCode": "myFruitList[2] = \"orange\"\nprint(myFruitList)\n\"Exercício 2: Apresentação do tipo de dado tupla\"\nmyFinalAnswerTuple = (\"apple\", \"banana\", \"pineapple\")\nprint(myFinalAnswerTuple)\nprint(type(myFinalAnswerTuple))\n# Acessando os itens da tupla por posição\nprint(myFinalAnswerTuple[0])\nprint(myFinalAnswerTuple[1])\nprint(myFinalAnswerTuple[2])",
+        "detail": "campinho4ex",
+        "documentation": {}
+    },
+    {
+        "label": "myFinalAnswerTuple",
+        "kind": 5,
+        "importPath": "campinho4ex",
+        "description": "campinho4ex",
+        "peekOfCode": "myFinalAnswerTuple = (\"apple\", \"banana\", \"pineapple\")\nprint(myFinalAnswerTuple)\nprint(type(myFinalAnswerTuple))\n# Acessando os itens da tupla por posição\nprint(myFinalAnswerTuple[0])\nprint(myFinalAnswerTuple[1])\nprint(myFinalAnswerTuple[2])\n\"Exercício 3: Apresentação do tipo de dado dicionário\"\nmyFavoriteFruitDictionary = {\n    \"Akua\": \"apple\",",
+        "detail": "campinho4ex",
+        "documentation": {}
+    },
+    {
+        "label": "myFavoriteFruitDictionary",
+        "kind": 5,
+        "importPath": "campinho4ex",
+        "description": "campinho4ex",
+        "peekOfCode": "myFavoriteFruitDictionary = {\n    \"Akua\": \"apple\",\n    \"Saanvi\": \"banana\",\n    \"Paulo\": \"pineapple\"\n}\nprint(myFavoriteFruitDictionary)\nprint(type(myFavoriteFruitDictionary))\nprint(myFavoriteFruitDictionary[\"Akua\"])\nprint(myFavoriteFruitDictionary[\"Saanvi\"])\nprint(myFavoriteFruitDictionary[\"Paulo\"])",
+        "detail": "campinho4ex",
+        "documentation": {}
+    },
+    {
+        "label": "myMixedTypeList",
+        "kind": 5,
+        "importPath": "campinho5ex",
+        "description": "campinho5ex",
+        "peekOfCode": "myMixedTypeList = [45, 290578, 1.02, True, \"My dog is on the bed.\", \"45\"]\n# Loop para exibir cada item da lista com seu tipo de dado\nfor item in myMixedTypeList:\n    print(\"{} is of the data type {}\".format(item, type(item)))",
+        "detail": "campinho5ex",
+        "documentation": {}
+    },
+    {
+        "label": "myVehicle",
+        "kind": 5,
+        "importPath": "campinho6ex",
+        "description": "campinho6ex",
+        "peekOfCode": "myVehicle = {\n    \"vin\": \"<empty>\",\n    \"make\": \"<empty>\",\n    \"model\": \"<empty>\",\n    \"year\": 0,\n    \"range\": 0,\n    \"topSpeed\": 0,\n    \"zeroSixty\": 0.0,\n    \"mileage\": 0\n}",
+        "detail": "campinho6ex",
+        "documentation": {}
+    },
+    {
+        "label": "myInventoryList",
+        "kind": 5,
+        "importPath": "campinho6ex",
+        "description": "campinho6ex",
+        "peekOfCode": "myInventoryList = []   \n# Lendo o arquivo CSV e armazenando os dados na memória\nwith open('car_fleet.csv') as csvFile:\n    csvReader = csv.reader(csvFile, delimiter=',')\n    lineCount = 0\n    for row in csvReader:\n        if lineCount == 0:\n            print(f'Nomes das colunas: {\", \".join(row)}')\n            lineCount += 1\n        else:",
+        "detail": "campinho6ex",
+        "documentation": {}
+    },
+    {
+        "label": "userReply",
+        "kind": 5,
+        "importPath": "campinho7ex",
+        "description": "campinho7ex",
+        "peekOfCode": "userReply = input(\"Do you need to ship a package? (Enter yes or no) \")\n# Condicional para verificar a resposta do usuário\nif userReply == \"yes\":\n    print(\"we can help you ship that package!\")\nelse:\n    print(\"Please come back when you need to ship a package. Thank you.\")    \n\"Exercício 2: Uso da declaração else\"    \n# Solicita ao usuário se deseja enviar um pacote\nuserReply = input(\"Do you need to ship a package? (Enter yes or no) \")\n# Condicional para verificar a resposta do usuário e fornecer uma resposta alternativa",
+        "detail": "campinho7ex",
+        "documentation": {}
+    },
+    {
+        "label": "userReply",
+        "kind": 5,
+        "importPath": "campinho7ex",
+        "description": "campinho7ex",
+        "peekOfCode": "userReply = input(\"Do you need to ship a package? (Enter yes or no) \")\n# Condicional para verificar a resposta do usuário e fornecer uma resposta alternativa\nif userReply == \"yes\":\n    print(\"We can help you ship that package!\")\nelse:\n    print(\"Please come back when you need to ship a package. Thank you.\")\n\"Exercício 3: Uso da declaração elif\"\n# Solicita ao usuário qual serviço ele deseja utilizar\nuserReply = input(\"Would you like to buy stamps, buy an envelope, or make a copy? (Enter stamps, envelope, or copy) \")\n# Condicional com múltiplas opções de serviço",
+        "detail": "campinho7ex",
+        "documentation": {}
+    },
+    {
+        "label": "userReply",
+        "kind": 5,
+        "importPath": "campinho7ex",
+        "description": "campinho7ex",
+        "peekOfCode": "userReply = input(\"Would you like to buy stamps, buy an envelope, or make a copy? (Enter stamps, envelope, or copy) \")\n# Condicional com múltiplas opções de serviço\nif userReply == \"stamps\":\n    print(\"We have many stamp designs to choose from.\")\nelif userReply == \"envelope\":\n    print(\"We have many envelope sizes to choose from.\")\nelif userReply == \"copy\":\n    copies = input(\"How many copies would you like? (Enter a number) \")\n    print(\"Here are {} copies.\".format(copies))\nelse:",
+        "detail": "campinho7ex",
+        "documentation": {}
+    },
+    {
+        "label": "register_user",
+        "kind": 2,
+        "importPath": "codigoextracamoinho",
+        "description": "codigoextracamoinho",
+        "peekOfCode": "def register_user():\n    user_data = {}\n    # Get first name\n    while True:\n        first_name = input(\"Enter your first name: \")\n        if first_name.strip() != \"\":\n            user_data[\"first_name\"] = first_name\n            break\n        else:\n            print(\"Please enter a valid first name.\")",
+        "detail": "codigoextracamoinho",
+        "documentation": {}
+    },
+    {
+        "label": "register_user",
+        "kind": 2,
+        "importPath": "codigoextracampinho1",
+        "description": "codigoextracampinho1",
+        "peekOfCode": "def register_user():\n    user_data = {}\n    # Get first name\n    while True:\n        first_name = input(\"Enter your first name: \")\n        if first_name.strip() != \"\":\n            user_data[\"first_name\"] = first_name\n            break\n        else:\n            print(\"Please enter a valid first name.\")",
+        "detail": "codigoextracampinho1",
+        "documentation": {}
+    },
+    {
+        "label": "LoginScreen",
+        "kind": 6,
+        "importPath": "codigoextratela",
+        "description": "codigoextratela",
+        "peekOfCode": "class LoginScreen:\n    def __init__(self, root):\n        self.root = root\n        self.root.title(\"Login Screen\")\n        # Create frames\n        self.frame_login = tk.Frame(self.root, bg=\"gray\")\n        self.frame_login.pack(fill=\"both\", expand=True)\n        self.frame_recovery = tk.Frame(self.root, bg=\"gray\")\n        self.frame_recovery.pack(fill=\"both\", expand=True)\n        # Create login frame widgets",
+        "detail": "codigoextratela",
+        "documentation": {}
+    }
+]
